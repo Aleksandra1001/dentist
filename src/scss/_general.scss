@@ -1,0 +1,160 @@
+.promo {
+    margin-top: 120px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 595px 649px;
+        gap: 20px;
+    }
+    &__title {
+        span {
+            color: $accent_color;
+        }
+    }
+    &__text {
+        margin-top: 32px;
+    }
+    &__button {
+        margin-top: 50px;
+    }
+    &__contacts {
+        margin-top: 52px;
+        display: flex;
+        gap: 110px;
+    }
+    &__item {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+        img {
+            width: 100%;
+        }
+    }
+    &__img {
+        margin-top: -200px;
+    }
+}
+.services {
+    margin-top: 120px;
+    &__title {
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 16px;
+        text-align: center;
+    }
+    &__tabs {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style-type: none;
+    }
+    &__tab {
+        height: 55px;
+        width: max-content;
+        padding: 15px 30px;
+        border-radius: 10px;
+        background: $main_color;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        color: $accent_color;
+        margin-right: 16px;
+        cursor: pointer;
+        transition: 0,5s all;
+        &_active {
+            border: 1px solid $accent_color;
+            background: $other_color;
+            color: $main_color;
+        }
+    }
+    &__content {
+        margin-top: 25px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px; 
+        border: 1px solid $accent_color;
+        border-radius: 16px;
+        background: $other_color;
+        margin-bottom: 16px;
+    }
+}
+.about {
+    margin-top: 120px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 646px 820px;
+    }
+    &__subtitle {
+        margin-top: 10px;
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    &__info {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    &__icon {
+        width: 89px;
+        height: 89px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+}
+.about-form {
+    display: block;
+    margin: 120px auto;
+    width: 1010px;
+    height: max-content;
+    padding: 43px 158px;
+    border-radius: 76px;
+    background: linear-gradient(90deg, $main_color 0%, rgba(15, 38, 80, 0.81) 100%);
+    &__title {
+        color: $accent_color;
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+    }
+    &__input {
+        display: flex;
+        flex-direction: column;
+        input {
+            width: 330px;
+            height: 85px;
+            padding: 26px 24px;
+            margin-top: 27px;
+            font-size: 22px;
+            color: $text_color;
+            border-radius: 14px;
+            background: $other_color;
+        }
+        label {
+            font-size: 22px;
+            color: $text_color;
+        }
+    }
+}
