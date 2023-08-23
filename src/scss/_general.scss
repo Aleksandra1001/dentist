@@ -136,14 +136,20 @@
         margin-top: -100px;
     }
 }
-.about-form {
-    display: block;
-    margin: 120px auto;
-    width: 1010px;
-    height: max-content;
-    padding: 43px 158px;
-    border-radius: 76px;
-    background: linear-gradient(90deg, $main_color 0%, rgba(15, 38, 80, 0.81) 100%);
+
+.request-form {
+    margin-top: 120px;
+    margin-bottom: -120px;
+
+    &__container {
+        display: block;
+      
+        width: 1010px;
+        height: max-content;
+        padding: 43px 158px;
+        border-radius: 76px;
+        background: linear-gradient(90deg, $main_color 0%, rgba(15, 38, 80, 0.81) 100%);
+    }
     &__title {
         color: $accent_color;
         text-align: center;
