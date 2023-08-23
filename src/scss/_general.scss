@@ -3,7 +3,7 @@
     &__wrapper {
         display: grid;
         grid-template-columns: 595px 649px;
-        gap: 20px;
+        gap: 65px;
     }
     &__title {
         span {
@@ -42,7 +42,7 @@
         align-items: center;
     }
     &__img {
-        margin-top: -200px;
+        margin-top: -70px;
     }
 }
 .services {
@@ -103,7 +103,8 @@
     margin-top: 120px;
     &__wrapper {
         display: grid;
-        grid-template-columns: 646px 820px;
+        grid-template-columns: 646px 426px;
+        gap: 170px;
     }
     &__subtitle {
         margin-top: 10px;
@@ -132,8 +133,7 @@
     }
 
     &__img {
-        margin-left: -100px;
-        margin-top: -100px;
+        margin-top: -60px;
     }
 }
 
