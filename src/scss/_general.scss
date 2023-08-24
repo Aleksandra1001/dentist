@@ -18,10 +18,10 @@
         align-items: center;
         justify-content: center;
         border-radius: 8px;
-        background: #0F2650;
+        background: $main_color;
     }
     &__phone {
-        color: #0F2650;
+        color: $main_color;
         text-decoration: none;
         display: block;
     }
@@ -125,13 +125,15 @@
         align-items: center;
     }
     &__icon {
+        min-width: 89px;
         width: 89px;
         height: 89px;
-        img {
-            width: 100%;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: $icon_color;
     }
-
     &__img {
         margin-top: -60px;
     }
@@ -140,39 +142,57 @@
 .request-form {
     margin-top: 120px;
     margin-bottom: -120px;
-
     &__container {
         display: block;
-      
         width: 1010px;
         height: max-content;
         padding: 43px 158px;
         border-radius: 76px;
-        background: linear-gradient(90deg, $main_color 0%, rgba(15, 38, 80, 0.81) 100%);
+        background: $button_color;
     }
     &__title {
         color: $accent_color;
         text-align: center;
     }
     &__form {
-        display: flex;
+        display: grid;
+        grid-template-columns: 335px 335px;
+        grid-template-rows: 65px 126px 47px;
+        gap: 24px;
+        margin-top: 27px;
     }
     &__input {
-        display: flex;
-        flex-direction: column;
         input {
-            width: 330px;
-            height: 85px;
-            padding: 26px 24px;
-            margin-top: 27px;
+            width: 335px;
+            height: 65px;
+            padding: 0 24px;
             font-size: 22px;
             color: $text_color;
             border-radius: 14px;
             background: $other_color;
         }
-        label {
+    }
+    &__textarea {
+        textarea {
+            width: 694px;
+            height: 126px;
+            padding: 20px 24px;
             font-size: 22px;
             color: $text_color;
+            border-radius: 14px;
+            background: $other_color;
+            resize: none;  
         }
+    }
+    &__button {
+        display: block;
+        position: relative;
+        top: 150px;
+        left: -90px;
+    }
+    &__button {
+        background: $accent_color;
+        font-size: 18px;
+        color: $main_color;
     }
 }

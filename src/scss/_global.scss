@@ -3,11 +3,10 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins-Regular";
-    // background: $background_color;
 }
 
 body {
-    background: #EEFBFA;
+    background: $background_color;
 }
 
 .container {
@@ -116,6 +115,51 @@ body {
 }
 
 .footer {
-    height: 300px;
-    background-color: #000;
+    height: 495px;
+    background-color: $background_footer_color;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        margin-top: 190px;
+    }
+
+    &__text {
+        margin-top: 30px;
+        max-width: 410px;
+    }
+    &__social {
+        display: flex;
+        gap: 24px;
+        margin-top: 20px;
+        &-icon {
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: $main_color;
+            &:hover {
+                background: $other_color;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        text-transform: none;
+        color: $main_color;
+    }
+    &__item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: $text_color;
+    }
 }
