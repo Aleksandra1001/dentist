@@ -95,3 +95,24 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 })
 
+$(document).ready(function () {
+  $(".request-form__form").on("submit", function () {
+    console.log("Loading...");
+
+    var form = $(this);
+    $.ajax({
+      url: "/php/mail.php",
+      method: form.attr("method"),
+      data: form.serialize(),
+      success: function (result) {
+        if (result) {
+          console.log("Message Sent!", result);
+        } else {
+          console.log("Error Sending email!", result);
+        }
+      },
+    });
+
+    return false;
+  });
+});
