@@ -142,6 +142,9 @@ body {
             justify-content: center;
             border-radius: 8px;
             background: $main_color;
+            img {
+                display: flex;
+            }
             &:hover {
                 background: $other_color;
             }
