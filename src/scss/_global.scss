@@ -7,6 +7,7 @@
 
 body {
     background: $background_color;
+    overflow-x: hidden;
 }
 
 .container {
@@ -117,14 +118,14 @@ body {
 .footer {
     height: 495px;
     background-color: $background_footer_color;
+    position: relative;
+    z-index: 1;
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        padding-top: 190px;
     }
-    &__block {
-        margin-top: 190px;
-    }
-
     &__text {
         margin-top: 30px;
         max-width: 410px;
