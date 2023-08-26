@@ -51,32 +51,30 @@ function servicesTabs() {
 }
 servicesTabs();
 
+window.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".header__menu");
+  const menuItem = document.querySelectorAll(".header__item");
+  const hamburger = document.querySelector(".hamburger");
 
-window.addEventListener('DOMContentLoaded', () => {
-  const menu = document.querySelector('.header__menu');
-  const menuItem = document.querySelectorAll('.header__item');
-  const hamburger = document.querySelector('.hamburger');
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("hamburger_active");
+    menu.classList.toggle("header__menu_active");
 
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('hamburger_active');
-      menu.classList.toggle('header__menu_active');
-
-      if (hamburger.classList.contains('hamburger_active')) {
-          document.body.style.cssText = 'overflow: hidden'
-      } else {
-          document.body.style.cssText = 'overflow: auto'
-      }
-   
+    if (hamburger.classList.contains("hamburger_active")) {
+      document.body.style.cssText = "overflow: hidden";
+    } else {
+      document.body.style.cssText = "overflow: auto";
+    }
   });
 
-  menuItem.forEach(item => {
-      item.addEventListener('click', () => {
-          document.body.style.cssText = 'overflow: auto'
-          hamburger.classList.toggle('hamburger_active');
-          menu.classList.toggle('header__menu_active');
-      })
-  })
-})
+  menuItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      document.body.style.cssText = "overflow: auto";
+      hamburger.classList.toggle("hamburger_active");
+      menu.classList.toggle("header__menu_active");
+    });
+  });
+});
 
 $(document).ready(function () {
   $(".request-form__form").on("submit", function () {
@@ -89,6 +87,8 @@ $(document).ready(function () {
       data: form.serialize(),
       success: function (result) {
         if (result) {
+          $(".modal").fadeIn("slow");
+
           console.log("Message Sent!", result);
         } else {
           console.log("Error Sending email!", result);
@@ -101,7 +101,9 @@ $(document).ready(function () {
 });
 
 $(".modal__button").on("click", function () {
-  $(".overlay, #thanks").fadeOut("slow");
+  $(".modal").fadeOut("slow");
 });
 
+const phoneInput = document.getElementsByName("phone");
 
+new Inputmask("+48 (999) 999 999").mask(phoneInput);
