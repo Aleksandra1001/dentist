@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="rus">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>LaDent</title>
 
+    <link rel="icon" type="image/x-icon" href="/img/icons/favicon.ico">
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="container header__container">
@@ -87,7 +89,7 @@
           <li class="services__tab">STOMATOLOGIA ESTETYCZNA</li>
           <li class="services__tab"><div>ORTODONCJA</div></li>
           <li class="services__tab"><div>ENDODONCJA</div></li>
-          <li class="services__tab services__tab_active">CHIRURGIA STOMATOLOGICZNA</li>
+          <li class="services__tab">CHIRURGIA STOMATOLOGICZNA</li>
           <li class="services__tab">PROTETYKA</li>
           <li class="services__tab"><div>IMPLANTOLOGIA</div></li>
           <li class="services__tab"><div>RADIOLOGIA</div></li>
@@ -526,7 +528,12 @@
           <div class="request-form__textarea">
             <textarea name="message" placeholder="Wiadomość" id=""></textarea>
           </div>
-          <button class="button request-form__button">Zapisać się</button>
+          <button class="button request-form__button">
+            <span class="request-form__button-text">
+                Zapisać się
+            </span>
+            <span class="request-form__button-spinner"></span>
+          </button>
         </form>
       </div>
     </div>

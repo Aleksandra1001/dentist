@@ -62,14 +62,16 @@ body {
     line-height: normal;
     border-radius: 14px;
     text-decoration: none;
+    transition: 0.4s;
+
     &_big {
         height: 65px;
         font-family: $Poppins-SemiBold;
         font-size: 22px;
     }
-    // &:hover {
-    //     background: $hover_color;
-    // }
+    &:hover {
+        opacity: 0.9;
+    }
 }
 .title {
     font-family: $poppins_bold;
@@ -143,6 +145,8 @@ body {
             justify-content: center;
             border-radius: 8px;
             background: $main_color;
+            transition: 0.4s;
+
             img {
                 display: flex;
             }
