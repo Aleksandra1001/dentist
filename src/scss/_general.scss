@@ -57,10 +57,12 @@
     &__tabs {
         margin-top: 50px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
-        gap: 0 16px;
+        gap: 16px 16px;
         list-style-type: none;
+
     }
     &__tab {
         height: 55px;
@@ -96,6 +98,9 @@
         border-radius: 16px;
         background: $other_color;
         margin-bottom: 16px;
+        &:hover {
+            background: $icon_color;
+        }
 
         &:last-child {
             margin-bottom: 0;
