@@ -33,8 +33,9 @@
     }
     &__contacts {
         margin-top: 52px;
-        display: flex;
-        gap: 110px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 90px;
     }
     &__item {
         display: flex;
