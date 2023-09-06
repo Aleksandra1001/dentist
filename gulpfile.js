@@ -24,6 +24,7 @@ var path = {
     img: "dist/img/",
     fonts: "dist/fonts/",
     php: "dist/php/",
+    pdf: "dist/pdf",
   },
   src: {
     // Пути исходников
@@ -33,6 +34,7 @@ var path = {
     img: "src/img/**/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.*",
     php: "src/php/**/*.*",
+    doc: "src/pdf/**/*.pdf",
   },
   watch: {
     // Пути для наблюдения за изменениями файлов
@@ -42,6 +44,7 @@ var path = {
     img: "src/img/**/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.*",
     php: "src/php/**/*.*",
+    pdf: "src/pdf/**/*.pdf",
   },
   clean: "./dist",
 };
@@ -130,9 +133,14 @@ function fonts() {
     .pipe(browserSync.stream());
 }
 
+
 /* ========== "PHP" ========== */
 function php() {
   return src(path.src.php).pipe(dest(path.dist.php)).pipe(browserSync.stream());
+}
+
+function pdf() {
+  return src(path.src.pdf).pipe(dest(path.dist.pdf)).pipe(browserSync.stream());
 }
 
 /* ========= "CLEAN" ========= */
@@ -148,6 +156,7 @@ function watching() {
   watch([path.watch.img], images);
   watch([path.watch.fonts], fonts);
   watch([path.watch.php], php);
+  watch([path.watch.pdf], pdf);
 }
 
 exports.clean = clean;
@@ -159,8 +168,9 @@ exports.fonts = fonts;
 exports.php = php;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.pdf = pdf;
 
-exports.build = parallel(html, styles, scripts, images, fonts, php);
+exports.build = parallel(html, styles, scripts, images, fonts, php, pdf);
 exports.default = parallel(
   clean,
   html,
@@ -169,6 +179,7 @@ exports.default = parallel(
   images,
   fonts,
   php,
+  pdf,
   browsersync,
   watching
 );
