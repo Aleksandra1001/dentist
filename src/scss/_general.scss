@@ -1,5 +1,5 @@
 .promo {
-    padding-top: 120px;
+    // padding-top: 50px;
     &__wrapper {
         display: grid;
         grid-template-columns: 595px 649px;
@@ -7,8 +7,15 @@
     }
     &__title {
         span {
+            font-family: $poppins_bold;
             color: $accent_color;
         }
+    }
+    &__list {
+        margin-top: 20px;
+    }
+    &__content {
+        margin-top: 10px;
     }
     &__icon {
         min-width: 50px;
@@ -26,7 +33,7 @@
         display: block;
     }
     &__text {
-        margin-top: 32px;
+        margin: 10px 0 0 30px;
     }
     &__button {
         margin-top: 50px;
