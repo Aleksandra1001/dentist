@@ -36,7 +36,7 @@
         margin: 10px 0 0 30px;
     }
     &__button {
-        margin-top: 50px;
+        margin-top: 24px;
     }
     &__contacts {
         margin-top: 52px;
@@ -50,7 +50,13 @@
         align-items: center;
     }
     &__img {
-        margin-top: -70px;
+        margin-top: -170px;
+        width: 550px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 .services {

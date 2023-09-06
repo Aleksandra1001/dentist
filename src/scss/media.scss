@@ -332,18 +332,19 @@
     }
 
     .promo {
-        padding-top: 60px;
+        padding-top: 0px;
 
         &__wrapper {
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 0px;
         }
         &__title {
             text-align: center;
         }
         &__button {
-            margin: 30px auto;
-            order: 4
+            margin: 0 auto;
+            order: 4;
+            margin-bottom: 24px;
         }
         &__descr {
             display: flex;
@@ -366,6 +367,7 @@
         }
         &__img {
             margin-top: 15px;
+            width: 100%;
         }
         &__contacts {
             grid-template-columns: 1fr;
@@ -373,6 +375,7 @@
             margin-top: 16px;
             order: 3;
             width: auto;
+            margin-bottom: 24px;
         }
         &__info {
             font-size: 16px;
