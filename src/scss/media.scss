@@ -32,6 +32,13 @@
         font-size: 16px;
         &_big {
             font-size: 20px;
+            width: 345px;
+            text-align: center;
+        }
+        &_color {
+            font-size: 20px;
+            width: 345px;
+            text-align: center;
         }
     }
     .promo {
@@ -46,7 +53,8 @@
             }
         }
         &__contacts {
-            width: 550px;
+            width: 465px;
+            gap: 24px 10px;
         }
     }
     .about {
@@ -109,6 +117,9 @@
         &_big {
             font-size: 18px;
         }
+        &_color {
+            font-size: 18px; 
+        }
     }
     .promo {
         padding-top: 80px;
@@ -117,11 +128,13 @@
             gap: 20px;
         }
         &__text {
-            margin-top: 20px;
+            margin-top: 15px;
         }
         &__button {
             margin-top: 30px;
-            height: 52px;
+            // height: 52px;
+            padding: 5px 36px;
+            height: 65px;
         }
         &__contacts {
             margin-top: 30px;
