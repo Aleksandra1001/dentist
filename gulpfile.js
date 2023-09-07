@@ -24,7 +24,7 @@ var path = {
     img: "dist/img/",
     fonts: "dist/fonts/",
     php: "dist/php/",
-    pdf: "dist/pdf",
+    pdf: "dist/pdf/",
   },
   src: {
     // Пути исходников
@@ -34,7 +34,7 @@ var path = {
     img: "src/img/**/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.*",
     php: "src/php/**/*.*",
-    doc: "src/pdf/**/*.pdf",
+    pdf: "src/pdf/**/*.*",
   },
   watch: {
     // Пути для наблюдения за изменениями файлов
@@ -44,7 +44,7 @@ var path = {
     img: "src/img/**/**/*.{jpg,png,svg,gif,ico}",
     fonts: "src/fonts/**/*.*",
     php: "src/php/**/*.*",
-    pdf: "src/pdf/**/*.pdf",
+    pdf: "src/pdf/**/*.*",
   },
   clean: "./dist",
 };
@@ -166,9 +166,9 @@ exports.scripts = scripts;
 exports.images = images;
 exports.fonts = fonts;
 exports.php = php;
+exports.pdf = pdf;
 exports.watching = watching;
 exports.browsersync = browsersync;
-exports.pdf = pdf;
 
 exports.build = parallel(html, styles, scripts, images, fonts, php, pdf);
 exports.default = parallel(
